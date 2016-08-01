@@ -105,6 +105,11 @@ function handleSubNumber(number) {
     return str;
 }
 
+if (valueRemaining < 0) {
+    str += "minus ";
+    valueRemaining *= -1;
+}
+
 while (valueRemaining > 0) {
     valueDealtWith = 0;
     if (valueRemaining >= 1e13) {
