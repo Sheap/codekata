@@ -107,6 +107,10 @@ function handleSubNumber(number) {
 
 while (valueRemaining > 0) {
     valueDealtWith = 0;
+    if (valueRemaining >= 1e13) {
+        str += "lots";
+        break;
+    }
     //subNumberPower = (Math.log10(valueRemaining) + 1)%3;
     blocksOfThree = Math.floor((Math.log10(valueRemaining))/3);
     subNumber = Math.floor(valueRemaining / Math.pow(1000, blocksOfThree));
